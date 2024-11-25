@@ -50,6 +50,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.welcome-card h1 {
+  margin: 0;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+.welcome-card p {
+  font-size: 1.2em;
+  padding-top: 1.5em;
+}
+
+.newera {
+  color: var(--color3);
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
 }
 
 .welcome-card img{
@@ -100,20 +120,22 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 2em;
+  padding-bottom: 0;
 }
 
 .site-icon {
-  padding: 1em;
+  padding: 0em;
   align-self: center;
   display: flex;
   flex-direction: row;
-  width: 20%;
   justify-content: space-between;
+  width: 12rem;
 }
 
 .site-icon svg {
   width: 100%;
+  height: 100%;
 }
 
 @keyframes colorshiftL {
@@ -139,21 +161,25 @@ body {
 }
 
 .logo-L {
+  color: var(--color9);
   animation: colorFlash 8s ease 0s infinite normal forwards;
   padding-right: 0.2em;
 }
 
 .logo-O {
+  color: var(--color9);
   padding-right: 0.4em;
   animation: colorFlash 8s ease 1s infinite alternate forwards;
 }
 
 .logo-A {
+  color: var(--color9);
   padding-right: 0.58em;
   animation: colorFlash 8s ease 2s infinite alternate forwards;
 }
 
 .logo-D {
+  color: var(--color9);
   padding-right: 0.58em;
   animation: colorFlash 8s ease 3s infinite alternate forwards;
 }
@@ -172,7 +198,7 @@ body {
   font-size: 1.2em;
 }
 
-.site-nav .logo {
+.logo-load {
   font-weight: bold;
   padding-left: 0;
 }
@@ -182,6 +208,12 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  visibility: visible;
+}
+
+.burger-menu {
+  display: none;
+  visibility: hidden;
 }
 
 footer {
@@ -195,7 +227,17 @@ footer {
 @media screen and (max-width: 48rem) {
   .site-nav,
   .main-menu {
-    flex-direction: column;
+  }
+
+  .container-menu {
+    display: none;
+    visibility: hidden;
+  }
+
+  .burger-menu {
+    display: block;
+    visibility: visible;
+    color: white;
   }
 
   .site-nav a {
@@ -205,6 +247,19 @@ footer {
 
   .welcome-card p:first-child {
     width: 60%;
+  }
+
+  .site-icon {
+    padding: 0em;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-header {
+    padding: 1em;
+    padding-bottom: 0;
   }
 }
 

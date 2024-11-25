@@ -2,6 +2,9 @@ baseURL = "https://mynewhugosite.com"
 title = "LOAD LAND"
 theme = "loadland-theme"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [menu]
   [[menu.main]]
     identifier = "discover"

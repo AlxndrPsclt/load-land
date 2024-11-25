@@ -1,25 +1,32 @@
 <header class="site-header">
-  <a class="site-icon" href="{{ .Site.BaseURL }}">
-    <div class="logo-L">
-      {{ readFile "/static/img/logo-L.svg" | safeHTML }}
-    </div>
-    <div class="logo-O">
-      {{ readFile "/static/img/logo-O.svg" | safeHTML }}
-    </div>
-    <div class="logo-A">
-      {{ readFile "/static/img/logo-A.svg" | safeHTML }}
-    </div>
-    <div class="logo-D">
-      {{ readFile "/static/img/logo-D.svg" | safeHTML }}
-    </div>
-  </a>
+  <div class="logo-load">
+    <a class="site-icon" href="{{ .Site.BaseURL }}">
+      <div class="logo-L">
+        {{ readFile "/static/img/logo-L.svg" | safeHTML }}
+      </div>
+      <div class="logo-O">
+        {{ readFile "/static/img/logo-O.svg" | safeHTML }}
+      </div>
+      <div class="logo-A">
+        {{ readFile "/static/img/logo-A.svg" | safeHTML }}
+      </div>
+      <div class="logo-D">
+        {{ readFile "/static/img/logo-D.svg" | safeHTML }}
+      </div>
+    </a>
+  </div>
   <nav class="site-nav">
-    <ul class="main-menu">
-      {{ range.Site.Menus.main }}
-      <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
+    <div class="container-menu">
+      <ul class="main-menu">
+        {{ range.Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="burger-menu">
+     AA
+    </div>
   </nav>
 </header>

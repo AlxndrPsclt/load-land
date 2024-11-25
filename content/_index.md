@@ -4,6 +4,34 @@ title: "LOAD LAND"
 
 ![logo load](/img/logoLoad.png)
 
-# Welcome to a *NEW ERA*
+<div class="textA">
+    We create
+</div>
 
-We create *CASHLESS SYSTEMS* for Experience Crafters.
+<div class="textB">
+    transparent and reliable
+</div>
+
+<div class="textB newera">
+CASHLESS SYSTEMS
+</div>
+
+<div class="textB">
+for festival creators
+</div>
+
+<div class="textB">
+that respect
+</div>
+
+<div class="textB">
+their public,
+</div>
+
+<div class="textB">
+their craft,
+</div>
+
+<div class="textB">
+and their music.
+</div>
