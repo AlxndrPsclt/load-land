@@ -1,8 +1,19 @@
 <header class="site-header">
+  <a class="site-icon" href="{{ .Site.BaseURL }}">
+    <div class="logo-L">
+      {{ readFile "/static/img/logo-L.svg" | safeHTML }}
+    </div>
+    <div class="logo-O">
+      {{ readFile "/static/img/logo-O.svg" | safeHTML }}
+    </div>
+    <div class="logo-A">
+      {{ readFile "/static/img/logo-A.svg" | safeHTML }}
+    </div>
+    <div class="logo-D">
+      {{ readFile "/static/img/logo-D.svg" | safeHTML }}
+    </div>
+  </a>
   <nav class="site-nav">
-    <a class="logo" href="{{ .Site.BaseURL }}">
-      {{ .Site.Title }}
-    </a>
     <ul class="main-menu">
       {{ range.Site.Menus.main }}
       <li>

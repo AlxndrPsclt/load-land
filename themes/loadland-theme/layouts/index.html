@@ -1,5 +1,9 @@
-{{ partial "header.html" . }}
+<div>
+  {{ partial "header.html" . }}
 
-{{ .Content }}
+  <div class="welcome-card">
+    {{ .Content }}
+  </div>
 
+</div>
 {{ partial "footer.html" . }}

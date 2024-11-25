@@ -1,0 +1,219 @@
+/* LAYOUT */
+:root {
+    --color0: #00BE7C;
+    --color1: #35E149;
+    --color2: #FFCD00;
+    --color3: #FF6662;
+    --color4: #FF00C3;
+    --color5: #7E7DC9;
+    --color6: #FFFFFF;
+    --color7: #C7C7C7;
+    --color8: #666666;
+    --color9: #333333;
+    --color10:#141414;
+    --color11:#000000;
+    --color-background:#141414;
+    --color-foreground:#C7C7C7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.lato-regular {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: var(--color7);
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: linear-gradient(to bottom, #000000, #010101, #020202, #030303, #060606, #0b0b0b, #101010, #141414);
+  font-size: 100%;
+  line-height: 1;
+  padding: 0rem;
+  margin: 0;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  margin-bottom: 2rem;
+}
+
+.welcome-card {
+  /*background-color: var(--color3);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-card img{
+  width: 100%;
+  clip-path: circle();
+	animation: myAnim 4s ease 0s 1 normal forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateLogo {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(30deg);
+	}
+}
+
+.welcome-card em {
+  color: var(--color3);
+}
+
+.welcome-card p:first-child {
+    width: 25%;
+    animation: rotateLogo 60s ease 0s infinite alternate forwards;
+    animation-iteration-count: infinite;
+  }
+
+/* NAVIGATION */
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.site-icon {
+  padding: 1em;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.site-icon svg {
+  width: 100%;
+}
+
+@keyframes colorshiftL {
+  0% {color: var(--color7);}
+  12.5% {color: var(--color0);}
+  25% {color: var(--color7);}
+  37.5% {color: var(--color7);}
+  50% {color: var(--color7);}
+  62.5% {color: var(--color3);}
+  75% {color: var(--color4);}
+  87.5% {color: var(--color7);}
+  100% {color: var(--color7);}
+}
+
+@keyframes colorFlash {
+  0% {color: var(--color7);}
+  40% {color: var(--color9); transform: scale(1);}
+    
+  55% {color: var(--color5); transform: scale(1.01);}
+  57.5% {color: var(--color2); transform: scale(1.04);}
+  60% {color: var(--color9); transform: scale(1.1);}
+  100% {color: var(--color7);}
+}
+
+.logo-L {
+  animation: colorFlash 8s ease 0s infinite normal forwards;
+  padding-right: 0.2em;
+}
+
+.logo-O {
+  padding-right: 0.4em;
+  animation: colorFlash 8s ease 1s infinite alternate forwards;
+}
+
+.logo-A {
+  padding-right: 0.58em;
+  animation: colorFlash 8s ease 2s infinite alternate forwards;
+}
+
+.logo-D {
+  padding-right: 0.58em;
+  animation: colorFlash 8s ease 3s infinite alternate forwards;
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.site-nav a {
+  display: block;
+  padding: 1rem;
+  color: var(--color5);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.site-nav .logo {
+  font-weight: bold;
+  padding-left: 0;
+}
+
+.main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  color: var(--color8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 48rem) {
+  .site-nav,
+  .main-menu {
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    padding: 0.5rem;
+    padding-left: 0;
+  }
+
+  .welcome-card p:first-child {
+    width: 60%;
+  }
+}
+
+/* LISTS */
+
+.post-snippet {
+  margin-bottom: 1rem;
+}
+
+.post-snippet h3 {
+  margin-bottom: 0.25rem;
+}

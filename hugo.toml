@@ -1,16 +1,22 @@
 baseURL = "https://mynewhugosite.com"
-title = "My New Hugo Site"
+title = "LOAD LAND"
 theme = "loadland-theme"
 
 [menu]
   [[menu.main]]
+    identifier = "discover"
+    name = "DISCOVER"
+    url = "/discover"
+    weight = 10
+
+  [[menu.main]]
     identifier = "posts"
-    name = "Posts"
+    name = "POSTS"
     url = "/posts"
     weight = 10
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "ABOUT"
     url = "/about"
-    weight = 20
+    weight = 40
