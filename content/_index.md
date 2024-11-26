@@ -15,7 +15,7 @@ title: "LOAD LAND"
 <em>transparent</em> and <em>reliable</em>
 </div>
 
-<div class="color-5-em">
+<div class="color-2-em">
 <em>cashless payment</em> system
 </div>
 
@@ -23,7 +23,7 @@ title: "LOAD LAND"
 for <em>festival creators</em>
 </div>
 
-<div class="color-5-em">
+<div class="color-2-em">
 that <em>respect</em>
 </div>
 
@@ -31,11 +31,15 @@ that <em>respect</em>
 their <em>public</em>,
 </div>
 
-<div class="color-3-em">
+<div class="color-0-em">
 their <em>craft</em>,
 </div>
 
-<div class="color-2-em">
+<div class="color-0-em">
 and their <em>music</em>.
 </div>
+</div>
+
+<div class="discover">
+Discover LOAD
 </div>

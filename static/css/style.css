@@ -29,19 +29,18 @@ body {
   font-family: "Lato", serif;
   font-weight: 400;
   font-style: normal;
-  background-image: linear-gradient(to bottom, #000000, #010101, #020202, #030303, #060606, #0b0b0b, #101010, #141414);
+  background-image: linear-gradient(to bottom, #000000, #020202, #030303, #060606, #0b0b0b, #101010, #141414);
   font-size: 100%;
   line-height: 1;
   padding: 0rem;
   margin: 0;
-  height: 92vh;
+  height: 93vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .content {
-  margin-bottom: 1rem;
 }
 
 .welcome-card {
@@ -51,7 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 2vh;
+  padding-top: 3vh;
 }
 
 .welcome-card h1 {
@@ -63,14 +62,6 @@ body {
 .welcome-card p {
   font-size: 1.2em;
   padding-top: 1.3em;
-}
-
-.newera-old {
-  color: var(--color3);
-  font-size: 1.8em;
-  font-weight: bold;
-  margin-top: 0.2em;
-  margin-bottom: 0.5em;
 }
 
 .welcome-card img{
@@ -110,20 +101,22 @@ body {
 
 .logo-load-graphic {
   width: 40vh;
-  padding: 3vh;
+  padding: 0vh;
   animation: rotateLogo 60s ease 0s infinite alternate forwards;
   animation-iteration-count: infinite;
 }
 
 .message{
-  margin-top: 1vh;
+  margin-top: 4vh;
+  width: 100%;
 }
 
 .color-0-em, .color-1-em, .color-2-em, .color-3-em, .color-4-em, .color-5-em {
-  font-size: 1.3em;
+  font-size: 1.15em;
   font-weight: normal;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
+  width: 100%;
 }
 
 .color-0-em em {
@@ -160,6 +153,69 @@ body {
   font-size: 1.4em;
   font-weight: bold;
   color: var(--color5);
+}
+
+.discover {
+  margin-top: 2.8vh;
+  font-size: 2em;
+  font-weight: bold;
+  color: transparent;
+
+  background: linear-gradient(41deg, #7e7dc9, #ffcd00, #7e7dc9, #7e7dc9, #ffcd00, #7e7dc9, #7e7dc9);
+  background-size: 1600% 1600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-animation: clickGradient 11s ease infinite, pulseLink 8s ease 0s infinite normal forwards;
+  -moz-animation: clickGradient 11s ease infinite, pulseLink 8s ease 0s infinite normal forwards;
+  animation: clickGradient 11s ease infinite, pulseLink 8s ease 0s infinite normal forwards;
+}
+
+@keyframes pulseLink {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+.css-selector {
+}
+
+@-webkit-keyframes clickGradient {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@-moz-keyframes clickGradient {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@keyframes clickGradient {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
 }
 
 /* NAVIGATION */
@@ -253,9 +309,7 @@ body {
 }
 
 .main {
-
   margin: 0;
-
 }
 
 .main-menu {
@@ -276,7 +330,11 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  padding-bottom: 0.1vh;
+}
+footer p {
+  padding: 0;
 }
 
 @media screen and (max-width: 48rem) {
