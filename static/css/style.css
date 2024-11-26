@@ -61,7 +61,7 @@ body {
 
 .welcome-card p {
   font-size: 1.2em;
-  padding-top: 1.3em;
+  padding-top: 2em;
 }
 
 .welcome-card img{
@@ -85,13 +85,23 @@ body {
   }
 }
 
-@keyframes rotateLogo {
+@keyframes rotateLogo30 {
 	0% {
 		transform: rotate(0deg);
 	}
 
 	100% {
 		transform: rotate(30deg);
+	}
+}
+
+@keyframes rotateLogoMax {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(1080deg);
 	}
 }
 
@@ -102,12 +112,14 @@ body {
 .logo-load-graphic {
   width: 40vh;
   padding: 0vh;
-  animation: rotateLogo 60s ease 0s infinite alternate forwards;
-  animation-iteration-count: infinite;
+  animation: rotateLogo30 60s ease 0s infinite alternate forwards;
+}
+.logo-load-graphic:hover {
+  animation: rotateLogoMax 00.55s ease 0s 1 normal forwards;
 }
 
 .message{
-  margin-top: 4vh;
+  margin-top: 2vh;
   width: 100%;
 }
 
@@ -155,11 +167,55 @@ body {
   color: var(--color5);
 }
 
+
+#mes-load {
+  display: inline-block;
+  animation: pulseSoft 0.9s ease 2.6s 1 normal forwards;
+}
+#mes-transparent {
+  display: inline-block;
+  animation: pulseSoft 0.5s ease 4s 1 normal forwards;
+}
+#mes-reliable {
+  display: inline-block;
+  animation: pulseSoft 0.5s ease 5s 1 normal forwards;
+}
+#mes-cashless-payment {
+  display: inline-block;
+  animation: pulseSoft 1s ease 6s 1 normal forwards;
+}
+#mes-festival-creators {
+  display: inline-block;
+  animation: pulseSoft 1.5s ease 8.5s 1 normal forwards;
+}
+#mes-respect {
+  display: inline-block;
+  animation: pulseSoft 0.25s ease 11s 2 normal forwards;
+}
+#mes-public {
+  display: inline-block;
+  animation: pulseSoft 0.5s ease 13s 1 normal forwards;
+}
+#mes-craft {
+  display: inline-block;
+  animation: pulseSoft 0.5s ease 14s 1 normal forwards;
+}
+#mes-music {
+  display: inline-block;
+  animation: pulseSoft 0.5s ease 15.25s 1 normal forwards;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
 .discover {
-  margin-top: 2.8vh;
   font-size: 2em;
   font-weight: bold;
   color: transparent;
+  text-decoration: none;
 
   background: linear-gradient(41deg, #7e7dc9, #ffcd00, #7e7dc9, #7e7dc9, #ffcd00, #7e7dc9, #7e7dc9);
   background-size: 1600% 1600%;
@@ -169,6 +225,35 @@ body {
   -webkit-animation: clickGradient 11s ease infinite, pulseLink 8s ease 0s infinite normal forwards;
   -moz-animation: clickGradient 11s ease infinite, pulseLink 8s ease 0s infinite normal forwards;
   animation: clickGradient 11s ease infinite, pulseLink 8s ease 0s infinite normal forwards;
+}
+
+.discover-container {
+  opacity: 0;
+  margin-top: 3.8vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 2s ease 3s 1 normal forwards;
+}
+
+.discover-container a{
+  text-decoration: none;
+}
+
+.discover:hover {
+  -webkit-animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
+  -moz-animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
+  animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes pulseLink {
@@ -198,6 +283,58 @@ body {
     transform: scale(1);
   }
 }
+
+@keyframes pulseSoft {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shakeLink {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-3px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(3px);
+  }
+
+  80% {
+    transform: translateY(5.4px);
+  }
+
+  90% {
+    transform: translateY(-4.4px);
+  }
+}
+
+          50% {
+                transform: scale(1.1);
+                  }
+
+                    100% {
+                          transform: scale(1);
+                            }
+                          }
+
 
 .css-selector {
 }
@@ -374,8 +511,30 @@ footer p {
 
 /* LISTS */
 
+.posts-page {
+  height: 77vh;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
 .post-snippet {
+  font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.post-title{
+  margin: 0;
+}
+
+.post-snippet h3 a{
+  color: var(--color0);
+  font-size: 2rem;
 }
 
 .post-snippet h3 {

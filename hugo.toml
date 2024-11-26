@@ -13,12 +13,6 @@ unsafe= true
     weight = 10
 
   [[menu.main]]
-    identifier = "posts"
-    name = "POSTS"
-    url = "/posts"
-    weight = 10
-
-  [[menu.main]]
     identifier = "about"
     name = "ABOUT"
     url = "/about"
