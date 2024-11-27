@@ -14,6 +14,8 @@
     --color11:#000000;
     --color-background:#141414;
     --color-foreground:#C7C7C7;
+    --color-saphire: var(--color0);
+    --color-gold: var(--color2);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -326,19 +328,6 @@ a {
   }
 }
 
-          50% {
-                transform: scale(1.1);
-                  }
-
-                    100% {
-                          transform: scale(1);
-                            }
-                          }
-
-
-.css-selector {
-}
-
 @-webkit-keyframes clickGradient {
     0%{background-position:4% 0%}
     50%{background-position:97% 100%}
@@ -523,20 +512,89 @@ footer p {
   height: 100%;
 }
 
-.post-snippet {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 .post-title{
   margin: 0;
 }
 
-.post-snippet h3 a{
-  color: var(--color0);
+.post-snippet {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
-
 .post-snippet h3 {
   margin-bottom: 0.25rem;
 }
+
+.pulselink-effect {
+  animation: pulseSoft 5s ease 2.6s infinite normal forwards;
+}
+.pulselink-effect:hover {
+  -webkit-animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
+  -moz-animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
+  animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
+}
+.gradient-saphire-pink {
+  color: transparent;
+  background: linear-gradient(41deg, var(--color5),var(--color-saphire),var(--color2),var(--color2));
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-animation: clickGradient 3s ease 0s infinite;
+  -moz-animation: clickGradient 3s ease 0s infinite;
+  animation: clickGradient 3s ease 0s infinite;
+}
+.delay-0 {
+  animation-delay: 0s;
+}
+.delay-1 {
+  animation-delay: 1s;
+}
+.delay-2 {
+  animation-delay: 2s;
+}
+.delay-3 {
+  animation-delay: 3s;
+}
+.delay-4 {
+  animation-delay: 4s;
+}
+.pulselink-effect-delay-0 {
+  animation-delay: 0s;
+}
+.pulselink-effect-delay-1 {
+  animation-delay: 1s;
+}
+.pulselink-effect-delay-2 {
+  animation-delay: 2s;
+}
+.pulselink-effect-delay-3 {
+  animation-delay: 3s;
+}
+
+
+/*
+.article-0 h3 a{
+  color: var(--color2);
+}
+.article-1 h3 a{
+  color: var(--color0);
+}
+.article-2 h3 a{
+  color: var(--color5);
+}
+.article-3 h3 a{
+  color: var(--color2);
+}
+.article-4 h3 a{
+  color: var(--color3);
+}
+.article-5 h3 a{
+  color: var(--color5);
+}
+.article-6 h3 a{
+  color: var(--color6);
+}
+.article-7 h3 a{
+  color: var(--color7);
+}
+*/

@@ -5,10 +5,10 @@
   {{ .Content }}
 
   <div class="posts-container">
-    {{ range.Data.Pages }}
-    <article class="post-snippet">
-      <h3 class="post-title">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ range $index, $element := .Data.Pages }}
+    <article class="post-snippet article-{{ $index }}">
+      <h3 class="post-title pulselink-effect pulselink-effect-delay-{{ $index }}">
+        <a class="gradient-saphire-pink delay-{{ $index }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h3>
     </article>
     {{ end }}
