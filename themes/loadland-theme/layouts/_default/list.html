@@ -8,7 +8,7 @@
     {{ range $index, $element := .Data.Pages }}
     <article class="post-snippet article-{{ $index }}">
       <h3 class="post-title pulselink-effect pulselink-effect-delay-{{ $index }}">
-        <a class="gradient-saphire-pink delay-{{ $index }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a class="gradient-saphire-pink gradient-{{ $index }} delay-{{ $index }}" href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h3>
     </article>
     {{ end }}

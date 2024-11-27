@@ -121,8 +121,10 @@ body {
 }
 
 .message{
-  margin-top: 2vh;
+  margin-top: 4vh;
   width: 100%;
+  transform: translate(0,5vh);
+  animation: moveMessage 0.8s ease-in-out 3s 1 normal forwards;
 }
 
 .color-0-em, .color-1-em, .color-2-em, .color-3-em, .color-4-em, .color-5-em {
@@ -231,7 +233,7 @@ a {
 
 .discover-container {
   opacity: 0;
-  margin-top: 3.8vh;
+  margin-top: 3.5vh;
   display: flex;
   flex-direction: column;
   animation: fadeIn 2s ease 3s 1 normal forwards;
@@ -246,6 +248,11 @@ a {
   -moz-animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
   animation: clickGradient 4s ease infinite, shakeLink 1.5s ease 0s infinite normal forwards;
   text-decoration: none;
+}
+
+@keyframes moveMessage {
+  0% { transform: translate(0,5vh); }
+  100% { transform: translate(0,0vh); }
 }
 
 @keyframes fadeIn {
@@ -509,11 +516,14 @@ footer p {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
+  height: 90%;
+  padding-top: 5vh;
 }
 
 .post-title{
+  display: flex;
   margin: 0;
+  text-align:center;
 }
 
 .post-snippet {
@@ -535,6 +545,17 @@ footer p {
 .gradient-saphire-pink {
   color: transparent;
   background: linear-gradient(41deg, var(--color5),var(--color-saphire),var(--color2),var(--color2));
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-animation: clickGradient 3s ease 0s infinite;
+  -moz-animation: clickGradient 3s ease 0s infinite;
+  animation: clickGradient 3s ease 0s infinite;
+}
+.gradient-4 {
+  color: transparent;
+  background: linear-gradient(41deg, var(--color5),var(--color-saphire),var(--color3),var(--color3),var(--color3),var(--color3));
   background-size: 600% 600%;
   background-clip: text;
   -webkit-background-clip: text;
